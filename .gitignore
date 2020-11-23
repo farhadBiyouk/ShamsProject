@@ -1,4 +1,4 @@
 venv
 db.sqlite3
 Shm_Ecom/__pycache__
-.idea
+Shm_ecommerce/migrations
