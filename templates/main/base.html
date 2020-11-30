@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>مرجع تخصصی برنامه نویسان</title>
+    <title>{% block title %}مرجع تخصصی برنامه نویسان{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="{% static 'css/style.css' %}  " rel="stylesheet" type="text/css" media="all"/>
@@ -60,25 +60,29 @@
                             </li>
                             <li>
                                 <a href="#" title="Français">
-                                    <span><img src="{% static 'images/au.png' %}" alt="fr" width="26" height="26"></span><span
+                                    <span><img src="{% static 'images/au.png' %}" alt="fr" width="26"
+                                               height="26"></span><span
                                         class="lang">Français</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" title="Español">
-                                    <span><img src="{% static 'images/bm.png' %}" alt="es" width="26" height="26"></span><span
+                                    <span><img src="{% static 'images/bm.png' %}" alt="es" width="26"
+                                               height="26"></span><span
                                         class="lang">Español</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" title="Deutsch">
-                                    <span><img src="{% static 'images/ck.png' %}" alt="de" width="26" height="26"></span><span
+                                    <span><img src="{% static 'images/ck.png' %}" alt="de" width="26"
+                                               height="26"></span><span
                                         class="lang">Deutsch</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="$" title="Russian">
-                                    <span><img src="{% static 'images/cu.png' %}" alt="ru" width="26" height="26"></span><span
+                                    <span><img src="{% static 'images/cu.png' %}" alt="ru" width="26"
+                                               height="26"></span><span
                                         class="lang">Russian</span>
                                 </a>
                             </li>
@@ -363,71 +367,9 @@
                 <div class="clear"></div>
             </ul>
         </div>
-        <div class="header_bottom">
-            <div class="header_bottom_right">
-                <div class="section group">
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href=""> <img src="{% static 'images/cu.png' %}" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>آی فون</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href="preview-5.html"><img src="images/pic3.png" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>سامسونگ</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section group">
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href=""> <img src="{% static 'images/pic3.jpg' %}" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>Acer</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href=""><img src="{% static 'images/pic1.png' %}" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>Canon</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="header_bottom_left_images">
-                <!-- FlexSlider -->
-                <section class="slider" dir=ltr>
-                    <div class="flexslider">
-                        <ul class="slides">
-                            <li><img src="{% static 'images/1.jpg' %}" alt=""/></li>
-                            <li><img src="{% static 'images/2.jpg' %}" alt=""/></li>
-                            <li><img src="{% static 'images/3.jpg' %}" alt=""/></li>
-                            <li><img src="{% static 'images/4.jpg' %}" alt=""/></li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- FlexSlider -->
-            </div>
-            <div class="clear"></div>
-        </div>
     </div>
+    {% block content %}
+    {% endblock %}
     <div class="footer">
         <div class="wrapper">
             <div class="section group">
