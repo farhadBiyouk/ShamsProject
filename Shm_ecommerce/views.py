@@ -7,3 +7,7 @@ def index(request, ):
 
 def preview(request, ):
     return render(request, 'preview.html')
+
+
+def products(request):
+    return render(request, 'product.html')

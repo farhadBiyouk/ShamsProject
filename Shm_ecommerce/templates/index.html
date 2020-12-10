@@ -1,9 +1,73 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base-fixed.html' %}
 {% load static %}
 {% block title %}صفحه ی اصلی{% endblock %}
 {% block content %}
     <div class="wrap">
         <div class="main">
+            <div class="header_bottom">
+            <div class="header_bottom_right">
+                <div class="section group">
+                    <div class="listview_1_of_2 images_1_of_2">
+                        <div class="listimg listimg_2_of_1">
+                            <a href=""> <img src="{% static 'images/pic4.png' %}" alt=""/></a>
+                        </div>
+                        <div class="text list_2_of_1">
+                            <h2>آی فون</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
+                        </div>
+                    </div>
+                    <div class="listview_1_of_2 images_1_of_2">
+                        <div class="listimg listimg_2_of_1">
+                            <a href=""><img src="{% static 'images/pic3.png' %}" alt="" / ></a>
+                        </div>
+                        <div class="text list_2_of_1">
+                            <h2>سامسونگ</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section group">
+                    <div class="listview_1_of_2 images_1_of_2">
+                        <div class="listimg listimg_2_of_1">
+                            <a href=""> <img src="{% static 'images/pic3.jpg' %}" alt=""/></a>
+                        </div>
+                        <div class="text list_2_of_1">
+                            <h2>Acer</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
+                        </div>
+                    </div>
+                    <div class="listview_1_of_2 images_1_of_2">
+                        <div class="listimg listimg_2_of_1">
+                            <a href=""><img src="{% static 'images/pic1.png' %}" alt=""/></a>
+                        </div>
+                        <div class="text list_2_of_1">
+                            <h2>Canon</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <div class="button"><span><a href="">افزودن به سبد خرید</a></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header_bottom_left_images">
+                <!-- FlexSlider -->
+                <section class="slider" dir=ltr>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li><img src="{% static 'images/1.jpg' %}" alt=""/></li>
+                            <li><img src="{% static 'images/2.jpg' %}" alt=""/></li>
+                            <li><img src="{% static 'images/3.jpg' %}" alt=""/></li>
+                            <li><img src="{% static 'images/4.jpg' %}" alt=""/></li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- FlexSlider -->
+            </div>
+            <div class="clear"></div>
+        </div>
             <div class="content">
                 <div class="content_top">
                     <div class="heading">
@@ -75,7 +139,7 @@
                         <div class="button" dir=ltr><span><img src="{% static 'images/cart.jpg' %}" alt=""/><a href=""
                                                                                                                class="cart-button">افزودن به سبد خرید</a></span>
                         </div>
-                        <div class="button"><span><a href="" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href=""><img src="{% static 'images/feature-pic2.jpg' %}" alt=""/></a>
@@ -87,10 +151,10 @@
                         <div class="button"><span><img src="{% static 'images/cart.jpg' %}" alt=""/><a href="#"
                                                                                                        class="cart-button">افزودن به سبد خرید</a></span>
                         </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
-                        <a href="preview-4.html"><img src="{% static 'images/feature-pic3.jpg' %}" alt=""/></a>
+                        <a href="{% url 'previewPage' %}"><img src="{% static 'images/feature-pic3.jpg' %}" alt=""/></a>
                         <h2>
 
                             لورم ایپسوم یا طرح‌نما </h2>
@@ -98,7 +162,7 @@
                         <p><span class="strike">$240.66</span><span class="price">$220.97</span></p>
                         <div class="button"><span><img src="{% static 'images/cart.jpg' %}" alt=""/><a
                                 href="preview-6.html" class="cart-button">افزودن به سبد خرید</a></span></div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
                         <img src="{% static 'images/feature-pic4.png' %}" alt=""/>
@@ -110,7 +174,7 @@
                         <div class="button"><span><img src={% static 'images/cart.jpg' %} alt=""/><a href="#"
                                                                                                      class="cart-button">افزودن به سبد خرید</a></span>
                         </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                 </div>
                 <div class="content_bottom">
@@ -184,7 +248,7 @@
                         <p><span class="strike">$438.99</span><span class="price">$403.66</span></p>
                         <div class="button"><span><img src={% static 'images/cart.jpg' %} alt=""/><a
                                 href="preview-3.html" class="cart-button">افزودن به سبد خرید</a></span></div>
-                        <div class="button"><span><a href="preview-3.html" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-4.html"><img src="{% static 'images/new-pic2.jpg' %}" alt=""/></a>
@@ -197,7 +261,7 @@
                         <p><span class="strike">$667.22</span><span class="price">$621.75</span></p>
                         <div class="button"><span><img src={% static 'images/cart.jpg' %} alt=""/><a
                                 href="preview-4.html" class="cart-button">افزودن به سبد خرید</a></span></div>
-                        <div class="button"><span><a href="preview-4.html" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-2.html"><img src="{% static 'images/feature-pic2.jpg' %}" alt=""/></a>
@@ -210,7 +274,7 @@
                         <p><span class="strike">$457.22</span><span class="price">$428.02</span></p>
                         <div class="button"><span><img src={% static 'images/cart.jpg' %} alt=""/><a
                                 href="preview-2.html" class="cart-button">افزودن به سبد خرید</a></span></div>
-                        <div class="button"><span><a href="preview-2.html" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                     <div class="grid_1_of_4 images_1_of_4">
                         <img src="{% static 'images/new-pic3.jpg' %}" alt=""/>
@@ -224,7 +288,7 @@
                         <div class="button"><span><img src={% static 'images/cart.jpg' %} alt=""/><a href="#"
                                                                                                      class="cart-button">افزودن به سبد خرید</a></span>
                         </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+                        <div class="button"><span><a href="{% url 'previewPage' %}" class="details">جزئیات</a></span></div>
                     </div>
                 </div>
             </div>
