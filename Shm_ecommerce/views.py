@@ -11,3 +11,7 @@ def preview(request, ):
 
 def products(request):
     return render(request, 'product.html')
+
+
+def about(request):
+    return render(request, 'about.html')
